@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  /* Design system colors */
+  --color-bvm-cream: #fefccf;
+  --color-bvm-cream-dark: #f5f0b0;
+  --color-bvm-gold: #755b00;
+  --color-bvm-gold-light: #a88a1a;
+  --color-bvm-saffron: #F4C430;
+  --color-bvm-terracotta: #944925;
+  --color-bvm-earth: #A0522D;
+  --color-bvm-dark: #1a0d05;
+  --color-bvm-dark-mid: #2c1810;
+  --color-bvm-muted: #6b5a4e;
+
+  /* Typography */
+  --font-heading: 'Libre Caslon Text', Georgia, serif;
+  --font-body: 'Hanken Grotesk', system-ui, sans-serif;
+
+  /* Spacing */
+  --spacing-section: 5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bvm-cream);
+  color: var(--color-bvm-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+}
+
+/* Utility classes */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.section-label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-bvm-terracotta);
+}
+
+.ornament-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--color-bvm-gold);
+}
+
+.ornament-divider::before,
+.ornament-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.4;
+}
+
+/* Hero gradient background */
+.hero-bg {
+  background: radial-gradient(ellipse at 30% 50%, #3d2000 0%, #1a0d05 50%, #0f0702 100%);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bvm-cream); }
+::-webkit-scrollbar-thumb { background: var(--color-bvm-gold); border-radius: 3px; }
